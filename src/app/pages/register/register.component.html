@@ -1,0 +1,78 @@
+<div class="wrapper wrapper-full-page">
+  <div class="page-header register-page header-filter"
+       filter-color="black"
+       style="background-image: url('./assets/img/register.jpg'); background-size: cover; background-position: top center;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card card-signup">
+            <h2 class="card-title text-center">Créer un Administrateur</h2>
+            <div class="card-body">
+              <form #adminForm="ngForm" (ngSubmit)="onRegister()" class="form">
+
+                <!-- Nom -->
+                <div class="form-group has-default">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="material-icons">face</i></span>
+                    </div>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      placeholder="Nom complet..."
+                      required
+                      [(ngModel)]="form.name"
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group has-default">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="material-icons">mail</i></span>
+                    </div>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email..."
+                      required
+                      [(ngModel)]="form.email"
+                    />
+                  </div>
+                </div>
+
+                <!-- Mot de passe -->
+                <div class="form-group has-default">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="material-icons">lock_outline</i></span>
+                    </div>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Mot de passe..."
+                      required
+                      [(ngModel)]="form.password"
+                    />
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-round mt-4">Ajouter l'administrateur</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

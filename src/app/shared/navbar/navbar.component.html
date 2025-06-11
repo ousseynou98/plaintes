@@ -1,0 +1,37 @@
+<nav #navbar class="navbar navbar-expand-lg navbar-white navbar-absolute">
+  <div class="container-fluid">
+    <div class="navbar-wrapper">
+      <div class="navbar-minimize">
+        <button mat-raised-button (click)="minimizeSidebar()" class="btn btn-just-icon btn-white btn-fab btn-round">
+          <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+          <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+        </button>
+      </div>
+      <a class="navbar-brand" href="#"> ANAM</a>
+    </div>
+    <button mat-button class="navbar-toggler btn-no-ripple" type="button" (click)="sidebarToggle()">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+      <ul class="navbar-nav">
+        <!-- Afficher l'email de l'utilisateur connecté -->
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="material-icons">person</i>
+            <span>{{ account?.email }}</span>
+          </a>
+        </li>
+        <!-- Bouton de déconnexion -->
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="logout()">
+            <i class="material-icons">exit_to_app</i>
+            <span>Déconnexion</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

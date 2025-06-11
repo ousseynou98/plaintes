@@ -1,0 +1,81 @@
+<div class="header" style="background-color: #00008B;">
+  <!--Content before waves-->
+  <div class="inner-header flex">
+ 
+  <h1>ANAM</h1>
+  
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-6 col-sm-6 ml-auto mr-auto">
+          <form #f="ngForm" (ngSubmit)="onLogin()" class="form-horizontal new-lg-form" id="loginform">
+          <div class="card card-login card-hidden">
+            <div class="card-header card-header-primary text-center" style="box-shadow: 0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(0,123,255,.4);background: linear-gradient(60deg,#007bff,#0056b3);">
+              <h4 class="card-title">CONNEXION</h4>
+            </div>
+            <div class="card-body p-md-12 mx-md-9">
+  
+              <div class="text-center">
+                <img src="assets/img/angular2-logo-white.png"/>
+                <h4 class="mt-1 pb-1">Portail d'applications</h4>
+              </div>
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">account_box</i>
+                      </span>
+                    </div>
+                    <input [(ngModel)]="account.email" #username="ngModel" required name="email" type="text" class="form-control" placeholder="LOGIN">
+                  </div>
+                </span>
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+                    <input [(ngModel)]="account.password" #password="ngModel" name="password" type="password" class="form-control" placeholder="**********">
+                  </div>
+                </span>
+                <div style="text-align: center" *ngIf="message.text.length">
+                  <br>
+                  <p class="text-danger"> {{message.text}} </p>
+                </div>
+            </div>
+            <div class="card-footer justify-content-center" >
+              <button [disabled]="!f.form.valid" type="submit" class="btn btn-primary btn-large mt-2" style="background: linear-gradient(60deg,#007bff,#0056b3);">CONNEXION</button>
+            </div>
+            
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--Waves Container-->
+  <div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0, 105, 148, 0.7)" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0, 162, 232, 0.5)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(135, 206, 235, 0.3)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+  </svg>
+  </div>
+  <!--Waves end-->
+  
+  </div>
+  <!--Header ends-->
+  
+  <!--Content starts-->
+  <div class="content flex">
+    <div><p>ANAM &copy;2025 - Agence Nationale des Affaires Maritimes</p>
+  </div>
+  <!--Content ends-->

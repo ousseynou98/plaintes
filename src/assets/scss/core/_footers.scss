@@ -1,0 +1,101 @@
+.footer{
+    padding: $padding-general-x 0;
+    text-align: center;
+    display: -webkit-flex; /* Safari */ /* Safari 6.1+ */
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+
+    ul{
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            display: inline-block;
+
+            a{
+                color: #1e88e5;
+                padding: $padding-general-x;
+                font-weight: $font-weight-bold;
+                font-size: $mdb-btn-font-size-base;
+                text-transform: uppercase;
+                border-radius: $border-radius-base;
+                text-decoration: none;
+                position: relative;
+                display: block;
+
+                &:hover{
+                    text-decoration: none;
+                    color: #1565c0;
+                }
+            }
+
+            .btn{
+                margin: 0;
+            }
+        }
+
+        &.links-horizontal{
+            &:first-child a{
+                padding-left: 0;
+            }
+
+            &:last-child a{
+                padding-right: 0;
+            }
+        }
+
+        &.links-vertical{
+            li{
+                display: block;
+                margin-left: -5px;
+                margin-right: -5px;
+
+                a{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .social-buttons{
+        a,
+        .btn{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .footer-logo {
+        height: 40px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .footer-text {
+        color: #1e88e5 !important;
+        font-size: 1rem !important;
+        text-transform: none !important;
+    }
+
+    .copyright {
+        padding: 15px 0;
+        color: #1e88e5;
+        font-weight: 500;
+    }
+
+    .pull-center{
+        display: inline-block;
+        float: none;
+    }
+}
+
+.off-canvas-sidebar {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+}
